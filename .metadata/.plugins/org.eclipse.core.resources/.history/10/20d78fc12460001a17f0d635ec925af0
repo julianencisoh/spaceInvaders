@@ -1,0 +1,26 @@
+package modelo;
+
+public class Malos extends Personaje {
+
+	private int cambia=5;
+	public Malos(int posX, int posY) {
+		
+		super(posX, posY);
+	
+	}
+	
+	public void moverPersonaje() {
+			posx=posx+cambia;
+			if(posx>=475) {
+				cambia*=-1;
+				posy=posy+5;
+			}
+			if (posx<=25) {
+				cambia*=-1;
+				posy=posy+5;
+			}
+		
+	}
+	
+	
+}

@@ -1,0 +1,72 @@
+package vista;
+
+import processing.core.PApplet;
+import vista.PantallaInicialVista;
+import vista.PantallaFinalVista;
+import vista.PantallaJuegoVista;
+
+public class Main extends PApplet {
+	
+	int pantallas;
+	PantallaInicialVista pantallaInicialVista;
+	PantallaFinalVista pantallaFinalVista;
+	PantallaJuegoVista pantallaJuegoVista;
+
+	public static void main(String[] args) {
+		PApplet.main("vista.Main");
+
+	}
+	
+	public void settings() {
+		size(600,600);
+		
+	}
+	
+    public void setup() {
+		pantallas = 0;
+		
+	}
+	
+    public void draw() {
+	background(150);
+	
+	switch (pantallas){
+	case 0: 
+		break;
+		
+	case 1: 
+		break;
+		
+	case 2: 
+		break;
+	}
+		
+	
+	}
+	
+	public void mouseClicked() {
+		
+		if(pantallas == 0) {
+			pantallas++;
+		}
+		
+		
+		
+	}
+	
+	
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

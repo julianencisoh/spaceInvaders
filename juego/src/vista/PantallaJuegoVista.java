@@ -1,0 +1,70 @@
+package vista;
+
+import processing.core.PApplet;
+import processing.core.PConstants;
+import controlador.PantallaJuegoControlador;
+
+
+public class PantallaJuegoVista{
+	private PApplet app2;
+	PantallaJuegoControlador pantallaJuegoControlador;
+	
+	// Constructor de la Clase PantallaJuegoVista
+	public PantallaJuegoVista(PApplet app2) {
+		this.app2=app2;
+		this.pantallaJuegoControlador = new PantallaJuegoControlador(app2);
+		
+	}
+	
+	//Metodo para inicializar la segunda pantalla "la de juego".
+	public void pintarPantallaJuego() {
+		app2.background(0);
+		dibujarHeroe();
+		dibujarEnemigo();
+			
+	} 
+	
+	// Metodo Para pintar Heroe
+	
+	public void dibujarHeroe() {
+		
+		app2.rectMode(PConstants.CENTER);
+		app2.fill(255,150,0);
+		app2.rect(pantallaJuegoControlador.getPosX(),560, 70,40);
+		
+	}
+	// Metodo Para darle datos al controlador para pintar el enemigo
+	
+	public void dibujarEnemigo() {
+		
+		for(int i = 0; i<25; i++) {
+			pantallaJuegoControlador.setPosX(i);
+			pantallaJuegoControlador.setPosY(i);
+			app2.fill(50,255,150);
+			app2.rect(pantallaJuegoControlador.getPosXE(),pantallaJuegoControlador.getPosYE(),70,40);
+			
+		}
+		
+		pantallaJuegoControlador.movimientoEnemigo();
+		
+	}
+	
+	
+	
+	
+	//metodo controlador para la presion de las flechas de right y left en el teclado
+	
+	
+	public void flechasLados() {
+		
+		pantallaJuegoControlador.flechas();
+		
+		
+		
+	}
+
+	
+	
+	
+
+}

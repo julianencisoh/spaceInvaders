@@ -1,0 +1,54 @@
+package vista;
+
+import processing.core.PApplet;
+import processing.core.PConstants;
+
+public class PantallaInicialVista {
+
+	private PApplet app;
+
+	public PantallaInicialVista(PApplet app) {
+		this.app = app;
+		
+	}
+	
+
+
+	public void dibujarPantallaInicial() {
+		app.background(0);
+		dibujarInicio();
+		dibujarBoton();
+		
+	}
+	
+private void dibujarBoton() {
+		app.fill(255);
+		app.textSize(30);
+		app.rectMode(PConstants.CENTER);
+		app.rect(300, 400, 100, 80);
+		app.fill(0);
+		app.textAlign(PConstants.CENTER);
+		app.text("INICIAR",300,400);
+		
+		
+	}
+
+	private void dibujarInicio() {
+	app.textSize(30);	
+	app.fill(255);	
+	app.textAlign(PConstants.CENTER);
+	app.text("INICIO DEL JUEGO SPACE INVADERS",300,300);	
+		
+	}
+	
+	
+	public PApplet getApp() {
+		return app;
+	}
+	
+	public void setApp(PApplet app) {
+		this.app = app;
+	}
+	
+	
+}

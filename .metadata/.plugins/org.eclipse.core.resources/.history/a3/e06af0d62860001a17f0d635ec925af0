@@ -1,0 +1,40 @@
+package modelo;
+
+
+
+public abstract class Personaje {
+	
+	protected int posx;
+	protected int posy;
+	
+
+	public Personaje(int posX,int posY) {
+		posx=posX;
+		posy=posY;
+	}
+public void moverPersonaje() {
+	
+}
+
+	public int getPosX() {
+		return posx;
+	}
+
+	public int getPosY() {
+		return posy;
+	}
+
+	public void setPosY(int posy) {
+		this.posy = posy;
+	}
+
+	public void setPosX(int posx) {
+		
+		this.posx = posx;
+	}
+
+	
+	
+	
+	
+}

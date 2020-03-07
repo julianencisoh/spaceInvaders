@@ -1,0 +1,15 @@
+package vista;
+
+import processing.core.PApplet;
+
+public class PantallaJuegoVista{
+	private PApplet app;
+	
+	public PantallaJuegoVista(PApplet app) {
+		this.app = app;
+		
+	}
+	
+	
+
+}

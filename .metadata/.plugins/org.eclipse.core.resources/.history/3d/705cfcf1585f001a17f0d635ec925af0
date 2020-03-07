@@ -1,0 +1,9 @@
+package modelo;
+
+public class Buenos {
+
+	public Buenos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

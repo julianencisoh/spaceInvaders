@@ -1,0 +1,9 @@
+package modelo;
+
+public class Buenos extends Personaje{
+
+	public Buenos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

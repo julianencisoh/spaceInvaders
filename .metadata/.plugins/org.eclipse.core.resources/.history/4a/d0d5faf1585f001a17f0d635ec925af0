@@ -1,0 +1,9 @@
+package modelo;
+
+public class Malos {
+
+	public Malos() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

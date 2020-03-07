@@ -1,0 +1,66 @@
+package vista;
+
+import processing.core.PApplet;
+import processing.core.PConstants;
+import controlador.PantallaJuegoControlador;
+
+
+public class PantallaJuegoVista{
+	private PApplet app2;
+	PantallaJuegoControlador pantallaJuegoControlador;
+	
+	
+	public PantallaJuegoVista(PApplet app2) {
+		this.app2(app2);
+		this.pantallaJuegoControlador = new PantallaJuegoControlador(app2);
+		
+	}
+	
+	public void pintarPantallaJuego() {
+		app2.background(0);
+		dibujarHeroe();
+		dibujarEnemigo();
+			
+	} 
+	
+	public void dibujarHeroe() {
+		
+		app2.rectMode(PConstants.CENTER);
+		app2.fill(255,0,0);
+		app2.rect(pantallaJuegoControlador.getPosX(),560, 70,40);
+		
+	}
+	
+	public void dibujarEnemigo() {
+		
+		for(int i = 0; i<25; i++) {
+			pantallaJuegoControlador.setPosX(i);
+			pantallaJuegoControlador.setPosY(i);
+			app2.fill(0,255,0);
+			app2.rect(pantallaJuegoControlador.getPosXE(),pantallaJuegoControlador.getPosYE(),70,40);
+			
+		}
+		
+		pantallaJuegoControlador.movimientoEnemigo();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	public void flechasLados() {
+		
+		pantallaJuegoControlador.flechas();
+		
+		
+		
+	}
+
+	
+	
+	
+
+}

@@ -1,0 +1,26 @@
+package modelo;
+
+public class Malos extends Personaje {
+
+	private int direccion=5;
+	public Malos(int posX, int posY) {
+		
+		super(posX, posY);
+	
+	}
+	
+	public void moverPersonaje() {
+			posx=posx+direccion;
+			if(posx>=475) {
+				direccion*=-1;
+				posy=posy+5;
+			}
+			if (posx<=25) {
+				direccion*=-1;
+				posy=posy+5;
+			}
+		
+	}
+	
+	
+}
